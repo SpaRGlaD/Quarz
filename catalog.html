@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Каталог</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230312135657">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="logo">
+					<a href="index.html">
+						<picture><source srcset="img/logo-main.webp" type="image/webp"><img class="logo__main" src="img/logo-main.png" alt="логотип сайта"></picture>
+						<picture><source srcset="img/logo_mobile.webp" type="image/webp"><img class="logo__mobile" src="img/logo_mobile.png" alt="логотип сайта"></picture>
+					</a>
+				</div>
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a href="catalog.html" class="menu__link">Каталог</a></li>
+							<li class="menu__item">
+								<a href="gallery.html" class="menu__link menu__link_list">Галерея</a>
+								<span class="menu__arrow arrow-menu"><img src="img/icons/triangle.svg" alt=""></span>
+								<ul class="sub-menu__list">
+									<li class="sub-menu__item"><a class="sub-menu__link" href="kitchen.html">Кухни</a></li>
+									<li class="sub-menu__item"><a class="sub-menu__link" href="kitchen.html">Ванные</a></li>
+									<li class="sub-menu__item"><a class="sub-menu__link" href="kitchen.html">Подоконники</a></li>
+									<li class="sub-menu__item"><a class="sub-menu__link" href="kitchen.html">Барные стойки</a></li>
+									<li class="sub-menu__item"><a class="sub-menu__link" href="kitchen.html">Коммерчиские объекты</a></li>
+								</ul>
+							</li>
+							<li class="menu__item"><a href="stock.html" class="menu__link">Акции</a></li>
+							<li class="menu__item"><a href="service.html" class="menu__link">Сервис</a></li>
+							<li class="menu__item"><a href="blog.html" class="menu__link">Статьи</a></li>
+							<li class="menu__item"><a href="about-company.html" class="menu__link">О Компании</a>
+								<span class="menu__arrow arrow-menu"><img src="img/icons/triangle.svg" alt=""></span>
+								<ul class="sub-menu__list">
+									<li class="sub-menu__item"><a class="sub-menu__link" href="contacts.html">Контакты</a></li>
+									<li class="sub-menu__item"><a class="sub-menu__link" href="partnership.html">Партнерство</a></li>
+								</ul>
+
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="header__item item-header" data-da=".menu__body, 580">
+					<div class="item-header__lang select-triangle">
+						<select name="form[]" data-class-modif="form">
+							<option value="1" selected>Укр</option>
+							<option value="2">Рус</option>
+							<option value="3">Eng</option>
+						</select>
+					</div>
+					<div class="item-header__city select-triangle">
+						<select name="form[]" data-class-modif="form">
+							<option value="1" selected>Киев</option>
+							<option value="2">Харьков</option>
+							<option value="3">Днепр</option>
+							<option value="4">Львов</option>
+							<option value="5">Одесса</option>
+						</select>
+					</div>
+					<div class="item-header__phones">
+						<a class="item-header__phone" href="tel:380675054499">+38 (067) 505-44-99</a>
+						<a class="item-header__phone" href="tel:380675014499">+38 (067) 501-44-99</a>
+					</div>
+				</div>
+				<button type="button" class="menu__icon icon-menu"><span></span></button>
+			</div>
+		</header>
+		<main class="page">
+			<section class="catalog">
+				<div class="catalog__container">
+					<div class="gallery__top">
+						<ul class="breadcrumb__list">
+							<li class="breadcrumb__item"><a class="breadcrumb__link" href="index.html">Главная</a></li>
+							<li class="breadcrumb__item">Каталог</li>
+						</ul>
+					</div>
+					<div class="catalog__body">
+						<div class="catalog__filter filter-catalog">
+							<form class="filter-catalog__form-search" action="">
+								<p class="filter-catalog__title">Найти</p>
+								<div class="filter-catalog__input-search">
+									<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Поиск товаров" class="filter-catalog__input">
+									<button type="button" class="filter-catalog__search-btn" id="filter-catalog__search-btn"></button>
+								</div>
+							</form>
+							<form class="filter-catalog__form-color" action="">
+								<div data-spollers class="spollers">
+									<div class="spollers__item">
+										<button type="button" data-spoller class="filter-catalog__title _spoller-active">Цвета</button>
+										<div class="spollers__body">
+											<button type="button" class="filter-catalog__reset-btn text">Все цвета</button>
+											<div class="filter-catalog__checkbox-color checkbox">
+												<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[color]">
+												<label for="c_1" class="checkbox__label checkbox__label_1"></label>
+												<input id="c_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="2" name="form[color]">
+												<label for="c_2" class="checkbox__label checkbox__label_2"></label>
+												<input id="c_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="3" name="form[color]">
+												<label for="c_3" class="checkbox__label checkbox__label_3"></label>
+												<input id="c_4" data-error="Ошибка" class="checkbox__input" type="checkbox" value="4" name="form[color]">
+												<label for="c_4" class="checkbox__label checkbox__label_4"></label>
+												<input id="c_5" data-error="Ошибка" class="checkbox__input" type="checkbox" value="5" name="form[color]">
+												<label for="c_5" class="checkbox__label checkbox__label_5"></label>
+												<input id="c_6" data-error="Ошибка" class="checkbox__input" type="checkbox" value="6" name="form[color]">
+												<label for="c_6" class="checkbox__label checkbox__label_6"></label>
+												<input id="c_7" data-error="Ошибка" class="checkbox__input" type="checkbox" value="7" name="form[color]">
+												<label for="c_7" class="checkbox__label checkbox__label_7"></label>
+												<input id="c_8" data-error="Ошибка" class="checkbox__input" type="checkbox" value="8" name="form[color]">
+												<label for="c_8" class="checkbox__label checkbox__label_8"></label>
+												<input id="c_9" data-error="Ошибка" class="checkbox__input" type="checkbox" value="9" name="form[color]">
+												<label for="c_9" class="checkbox__label checkbox__label_9"></label>
+												<input id="c_10" data-error="Ошибка" class="checkbox__input" type="checkbox" value="10" name="form[color]">
+												<label for="c_10" class="checkbox__label checkbox__label_10"></label>
+												<input id="c_11" data-error="Ошибка" class="checkbox__input" type="checkbox" value="11" name="form[color]">
+												<label for="c_11" class="checkbox__label checkbox__label_11"></label>
+												<input id="c_12" data-error="Ошибка" class="checkbox__input" type="checkbox" value="12" name="form[color]">
+												<label for="c_12" class="checkbox__label checkbox__label_12"></label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+							<form class="filter-catalog__form-manufacturers" action="">
+								<div data-spollers class="spollers">
+									<div class="spollers__item">
+										<button type="button" data-spoller class="filter-catalog__title">Производители</button>
+										<div class="spollers__body">
+											<button type="button" class="filter-catalog__reset-btn text">Все производители</button>
+											<div class="filter-catalog__checkbox-manufacturers checkbox filter-catalog__checkbox_column">
+												<input id="d_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Caesarstone" name="form[manufacturers]">
+												<label for="d_1" class="checkbox__label">Caesarstone</label>
+												<input id="d_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Quarella quarz" name="form[manufacturers]">
+												<label for="d_2" class="checkbox__label">Quarella кварц</label>
+												<input id="d_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Quarella mramor" name="form[manufacturers]">
+												<label for="d_3" class="checkbox__label">Quarella мрамор</label>
+												<input id="d_4" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Neolith" name="form[manufacturers]">
+												<label for="d_4" class="checkbox__label">Neolith</label>
+												<input id="d_5" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Atem" name="form[manufacturers]">
+												<label for="d_5" class="checkbox__label">Atem</label>
+												<input id="d_6" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Avant" name="form[manufacturers]">
+												<label for="d_6" class="checkbox__label">Avant</label>
+												<input id="d_7" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Vicostone" name="form[manufacturers]">
+												<label for="d_7" class="checkbox__label">Vicostone</label>
+												<input id="d_8" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Silestone" name="form[manufacturers]">
+												<label for="d_8" class="checkbox__label">Silestone</label>
+												<input id="d_9" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Belenco" name="form[manufacturers]">
+												<label for="d_9" class="checkbox__label">Belenco</label>
+												<input id="d_10" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Belenco" name="form[manufacturers]">
+												<label for="d_10" class="checkbox__label">Caesarstone</label>
+												<input id="d_12" data-error="Ошибка" class="checkbox__input" type="checkbox" value="2" name="form[manufacturers]">
+												<label for="d_12" class="checkbox__label">Quarella кварц</label>
+												<input id="d_13" data-error="Ошибка" class="checkbox__input" type="checkbox" value="3" name="form[manufacturers]">
+												<label for="d_13" class="checkbox__label">Quarella мрамор</label>
+												<input id="d_14" data-error="Ошибка" class="checkbox__input" type="checkbox" value="4" name="form[manufacturers]">
+												<label for="d_14" class="checkbox__label">Neolith</label>
+												<input id="d_15" data-error="Ошибка" class="checkbox__input" type="checkbox" value="5" name="form[manufacturers]">
+												<label for="d_15" class="checkbox__label">Atem</label>
+												<input id="d_16" data-error="Ошибка" class="checkbox__input" type="checkbox" value="6" name="form[manufacturers]">
+												<label for="d_16" class="checkbox__label">Avant</label>
+												<input id="d_17" data-error="Ошибка" class="checkbox__input" type="checkbox" value="7" name="form[manufacturers]">
+												<label for="d_17" class="checkbox__label">Vicostone</label>
+												<input id="d_18" data-error="Ошибка" class="checkbox__input" type="checkbox" value="8" name="form[manufacturers]">
+												<label for="d_18" class="checkbox__label">Silestone</label>
+												<input id="d_19" data-error="Ошибка" class="checkbox__input" type="checkbox" value="9" name="form[manufacturers]">
+												<label for="d_19" class="checkbox__label">Belenco</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+							<form class="filter-catalog__form-material" action="">
+								<div data-spollers class="spollers">
+									<div class="spollers__item">
+										<button type="button" data-spoller class="filter-catalog__title">Материал</button>
+										<div class="spollers__body">
+											<button type="button" class="filter-catalog__reset-btn text">Все </button>
+											<div class="filter-catalog__checkbox-material checkbox filter-catalog__checkbox_column">
+												<input id="e_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="quarz" name="form[material]">
+												<label for="e_1" class="checkbox__label">Кварц</label>
+												<input id="e_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="keramogranit" name="form[material]">
+												<label for="e_2" class="checkbox__label">Керамогранит</label>
+												<input id="e_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="aglomerat" name="form[material]">
+												<label for="e_3" class="checkbox__label">Агломерат</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+							<form class="filter-catalog__form-material" action="">
+								<div data-spollers class="spollers">
+									<div class="spollers__item">
+										<button type="button" data-spoller class="filter-catalog__title">Толщина</button>
+										<div class="spollers__body">
+											<button type="button" class="filter-catalog__reset-btn text">Все </button>
+											<div class="filter-catalog__checkbox-material checkbox filter-catalog__checkbox_column">
+												<input id="h_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="12" name="form[]">
+												<label for="h_1" class="checkbox__label">12 мм</label>
+												<input id="h_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="13" name="form[]">
+												<label for="h_2" class="checkbox__label">13 мм</label>
+												<input id="h_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="20" name="form[]">
+												<label for="h_3" class="checkbox__label">20 мм</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+							<form class="filter-catalog__form-material" action="">
+								<div data-spollers class="spollers">
+									<div class="spollers__item">
+										<button type="button" data-spoller class="filter-catalog__title">Поверхность</button>
+										<div class="spollers__body">
+											<button type="button" class="filter-catalog__reset-btn text">Все </button>
+											<div class="filter-catalog__checkbox-material checkbox filter-catalog__checkbox_column">
+												<input id="f_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="mate" name="form[]">
+												<label for="f_1" class="checkbox__label">Матовая</label>
+												<input id="f_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="gloss" name="form[]">
+												<label for="f_2" class="checkbox__label">Глянцевая</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+							<form class="filter-catalog__form-sizes" action="">
+								<div data-spollers class="spollers">
+									<div class="spollers__item">
+										<button type="button" data-spoller class="filter-catalog__title">Размеры</button>
+										<div class="spollers__body">
+											<button type="button" class="filter-catalog__reset-btn text">Все </button>
+											<div class="filter-catalog__checkbox-sizes checkbox filter-catalog__checkbox_column">
+												<input id="s_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="3000x1400" name="form[sizes]">
+												<label for="s_1" class="checkbox__label">3000x1400</label>
+												<input id="s_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="3050x1240" name="form[sizes]">
+												<label for="s_2" class="checkbox__label">3050x1240</label>
+												<input id="s_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="3050x1440" name="form[sizes]">
+												<label for="s_3" class="checkbox__label">3050x1440</label>
+												<input id="s_4" data-error="Ошибка" class="checkbox__input" type="checkbox" value="3060x1440" name="form[sizes]">
+												<label for="s_4" class="checkbox__label">3060x1440</label>
+												<input id="s_5" data-error="Ошибка" class="checkbox__input" type="checkbox" value="3070x1410" name="form[sizes]">
+												<label for="s_5" class="checkbox__label">3070x1410</label>
+												<input id="s_6" data-error="Ошибка" class="checkbox__input" type="checkbox" value="3200×1600" name="form[sizes]">
+												<label for="s_6" class="checkbox__label">3200×1600</label>
+												<input id="s_7" data-error="Ошибка" class="checkbox__input" type="checkbox" value="3200x1500" name="form[sizes]">
+												<label for="s_7" class="checkbox__label">3200x1500</label>
+												<input id="s_8" data-error="Ошибка" class="checkbox__input" type="checkbox" value="3250×1590" name="form[sizes]">
+												<label for="s_8" class="checkbox__label">3250×1590</label>
+												<input id="s_9" data-error="Ошибка" class="checkbox__input" type="checkbox" value="3340×1640" name="form[sizes]">
+												<label for="s_9" class="checkbox__label">3340×1640</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+							<button type="button" class="filter-catalog__btn filter-catalog__btn-close">
+								<img src="img/icons/close.svg" alt="">
+							</button>
+						</div>
+						<div class="catalog__products">
+							<h2 class="gallery__title title">Каталог. Кварцевые поверхности Quarella</h2>
+							<button type="button" class="filter-catalog__btn button btn-arrow">Фильтры</button>
+							<div class="product-catalog__body">
+								<a class="product-catalog__item item-product" href="./product.html">
+									<picture class="item-product__image">
+										<source media="(max-width: 480px)" srcset="img/product/01-375.jpg">
+										<img src="img/product/01.jpg" alt="">
+									</picture>
+									<p class="item-product__title">Iron copper</p>
+									<div class="item-product__bottom">
+										<p class="item-product__subtitle">Neolith</p>
+										<span>Бесплатная порезка</span>
+									</div>
+									<span class="item-product__stock">Акция</span>
+								</a>
+								<a class="product-catalog__item item-product" href="./product.html">
+									<picture class="item-product__image">
+										<source media="(max-width: 480px)" srcset="img/product/01-375.jpg">
+										<img src="img/product/01.jpg" alt="">
+									</picture>
+									<p class="item-product__title">Iron copper</p>
+									<div class="item-product__bottom">
+										<p class="item-product__subtitle">Caesarstone</p>
+										<span style="visibility: hidden">Бесплатная порезка</span>
+									</div>
+									<span class="item-product__stock" style="visibility: hidden">Акция</span>
+								</a>
+								<a class="product-catalog__item item-product" href="./product.html">
+									<picture class="item-product__image">
+										<source media="(max-width: 480px)" srcset="img/product/01-375.jpg">
+										<img src="img/product/01.jpg" alt="">
+									</picture>
+									<p class="item-product__title">Iron copper</p>
+									<div class="item-product__bottom">
+										<p class="item-product__subtitle">Avant</p>
+										<span style="visibility: hidden">Бесплатная порезка</span>
+									</div>
+									<span class="item-product__stock" style="visibility: hidden">Акция</span>
+								</a>
+								<a class="product-catalog__item item-product" href="./product.html">
+									<picture class="item-product__image">
+										<source media="(max-width: 480px)" srcset="img/product/01-375.jpg">
+										<img src="img/product/01.jpg" alt="">
+									</picture>
+									<p class="item-product__title">Iron copper</p>
+									<div class="item-product__bottom">
+										<p class="item-product__subtitle">Belenco</p>
+										<span>Бесплатная порезка</span>
+									</div>
+									<span class="item-product__stock">Акция</span>
+								</a>
+								<a class="product-catalog__item item-product" href="./product.html">
+									<picture class="item-product__image">
+										<source media="(max-width: 480px)" srcset="img/product/01-375.jpg">
+										<img src="img/product/01.jpg" alt="">
+									</picture>
+									<p class="item-product__title">Iron copper</p>
+									<div class="item-product__bottom">
+										<p class="item-product__subtitle">Caesarstone</p>
+										<span>Бесплатная порезка</span>
+									</div>
+									<span class="item-product__stock">Акция</span>
+								</a>
+								<a class="product-catalog__item item-product" href="./product.html">
+									<picture class="item-product__image">
+										<source media="(max-width: 480px)" srcset="img/product/01-375.jpg">
+										<img src="img/product/01.jpg" alt="">
+									</picture>
+									<p class="item-product__title">Iron copper</p>
+									<div class="item-product__bottom">
+										<p class="item-product__subtitle">Quarella</p>
+										<span style="visibility: hidden">Бесплатная порезка</span>
+									</div>
+									<span class="item-product__stock" style="visibility: hidden">Акция</span>
+								</a>
+								<a class="product-catalog__item item-product" href="./product.html">
+									<picture class="item-product__image">
+										<source media="(max-width: 480px)" srcset="img/product/01-375.jpg">
+										<img src="img/product/01.jpg" alt="">
+									</picture>
+									<p class="item-product__title">Iron copper</p>
+									<div class="item-product__bottom">
+										<p class="item-product__subtitle">Avant</p>
+										<span>Бесплатная порезка</span>
+									</div>
+									<span class="item-product__stock">Акция</span>
+								</a>
+								<a class="product-catalog__item item-product" href="./product.html">
+									<picture class="item-product__image">
+										<source media="(max-width: 480px)" srcset="img/product/01-375.jpg">
+										<img src="img/product/01.jpg" alt="">
+									</picture>
+									<p class="item-product__title">Iron copper</p>
+									<div class="item-product__bottom">
+										<p class="item-product__subtitle">Belenco</p>
+										<span>Бесплатная порезка</span>
+									</div>
+									<span class="item-product__stock">Акция</span>
+								</a>
+								<a class="product-catalog__item item-product" href="./product.html">
+									<picture class="item-product__image">
+										<source media="(max-width: 480px)" srcset="img/product/01-375.jpg">
+										<img src="img/product/01.jpg" alt="">
+									</picture>
+									<p class="item-product__title">Iron copper</p>
+									<div class="item-product__bottom">
+										<p class="item-product__subtitle">Caesarstone</p>
+										<span>Бесплатная порезка</span>
+									</div>
+									<span class="item-product__stock">Акция</span>
+								</a>
+								<a class="product-catalog__item item-product" href="./product.html">
+									<picture class="item-product__image">
+										<source media="(max-width: 480px)" srcset="img/product/01-375.jpg">
+										<img src="img/product/01.jpg" alt="">
+									</picture>
+									<p class="item-product__title">Iron copper</p>
+									<div class="item-product__bottom">
+										<p class="item-product__subtitle">Avant</p>
+										<span>Бесплатная порезка</span>
+									</div>
+									<span class="item-product__stock">Акция</span>
+								</a>
+								<a class="product-catalog__item item-product" href="./product.html">
+									<picture class="item-product__image">
+										<source media="(max-width: 480px)" srcset="img/product/01-375.jpg">
+										<img src="img/product/01.jpg" alt="">
+									</picture>
+									<p class="item-product__title">Iron copper</p>
+									<div class="item-product__bottom">
+										<p class="item-product__subtitle">Quarella</p>
+										<span>Бесплатная порезка</span>
+									</div>
+									<span class="item-product__stock" style="visibility: hidden">Акция</span>
+								</a>
+								<a class="product-catalog__item item-product" href="./product.html">
+									<picture class="item-product__image">
+										<source media="(max-width: 480px)" srcset="img/product/01-375.jpg">
+										<img src="img/product/01.jpg" alt="">
+									</picture>
+									<p class="item-product__title">Iron copper</p>
+									<div class="item-product__bottom">
+										<p class="item-product__subtitle">Neolith</p>
+										<span style="visibility: hidden">Бесплатная порезка</span>
+									</div>
+									<span class="item-product__stock">Акция</span>
+								</a>
+								<a class="product-catalog__item item-product" href="./product.html">
+									<picture class="item-product__image">
+										<source media="(max-width: 480px)" srcset="img/product/01-375.jpg">
+										<img src="img/product/01.jpg" alt="">
+									</picture>
+									<p class="item-product__title">Iron copper</p>
+									<div class="item-product__bottom">
+										<p class="item-product__subtitle">Belenco</p>
+										<span>Бесплатная порезка</span>
+									</div>
+									<span class="item-product__stock">Акция</span>
+								</a>
+								<a class="product-catalog__item item-product" href="./product.html">
+									<picture class="item-product__image">
+										<source media="(max-width: 480px)" srcset="img/product/01-375.jpg">
+										<img src="img/product/01.jpg" alt="">
+									</picture>
+									<p class="item-product__title">Iron copper</p>
+									<div class="item-product__bottom">
+										<p class="item-product__subtitle">Neolith</p>
+										<span style="visibility: hidden">Бесплатная порезка</span>
+									</div>
+									<span class="item-product__stock" style="visibility: hidden">Акция</span>
+								</a>
+								<a class="product-catalog__item item-product" href="./product.html">
+									<picture class="item-product__image">
+										<source media="(max-width: 480px)" srcset="img/product/01-375.jpg">
+										<img src="img/product/01.jpg" alt="">
+									</picture>
+									<p class="item-product__title">Iron copper</p>
+									<div class="item-product__bottom">
+										<p class="item-product__subtitle">Quarella</p>
+										<span>Бесплатная порезка</span>
+									</div>
+									<span class="item-product__stock">Акция</span>
+								</a>
+								<a class="product-catalog__item item-product" href="./product.html">
+									<picture class="item-product__image">
+										<source media="(max-width: 480px)" srcset="img/product/01-375.jpg">
+										<img src="img/product/01.jpg" alt="">
+									</picture>
+									<p class="item-product__title">Iron copper</p>
+									<div class="item-product__bottom">
+										<p class="item-product__subtitle">Avant</p>
+										<span>Бесплатная порезка</span>
+									</div>
+									<span class="item-product__stock" style="visibility: hidden">Акция</span>
+								</a>
+								<a class="product-catalog__item item-product" href="./product.html">
+									<picture class="item-product__image">
+										<source media="(max-width: 480px)" srcset="img/product/01-375.jpg">
+										<img src="img/product/01.jpg" alt="">
+									</picture>
+									<p class="item-product__title">Iron copper</p>
+									<div class="item-product__bottom">
+										<p class="item-product__subtitle">Belenco</p>
+										<span style="visibility: hidden">Бесплатная порезка</span>
+									</div>
+									<span class="item-product__stock">Акция</span>
+								</a>
+								<a class="product-catalog__item item-product" href="./product.html">
+									<picture class="item-product__image">
+										<source media="(max-width: 480px)" srcset="img/product/01-375.jpg">
+										<img src="img/product/01.jpg" alt="">
+									</picture>
+									<p class="item-product__title">Iron copper</p>
+									<div class="item-product__bottom">
+										<p class="item-product__subtitle">Neolith</p>
+										<span>Бесплатная порезка</span>
+									</div>
+									<span class="item-product__stock">Акция</span>
+								</a>
+								<a class="product-catalog__item item-product" href="./product.html">
+									<picture class="item-product__image">
+										<source media="(max-width: 480px)" srcset="img/product/01-375.jpg">
+										<img src="img/product/01.jpg" alt="">
+									</picture>
+									<p class="item-product__title">Iron copper</p>
+									<div class="item-product__bottom">
+										<p class="item-product__subtitle">Quarella</p>
+										<span style="visibility: hidden">Бесплатная порезка</span>
+									</div>
+									<span class="item-product__stock" style="visibility: hidden">Акция</span>
+								</a>
+								<a class="product-catalog__item item-product" href="./product.html">
+									<picture class="item-product__image">
+										<source media="(max-width: 480px)" srcset="img/product/01-375.jpg">
+										<img src="img/product/01.jpg" alt="">
+									</picture>
+									<p class="item-product__title">Iron copper</p>
+									<div class="item-product__bottom">
+										<p class="item-product__subtitle">Neolith</p>
+										<span>Бесплатная порезка</span>
+									</div>
+									<span class="item-product__stock">Акция</span>
+								</a>
+							</div>
+							<div class="pagging">
+								<a href="#" class="pagging__arrow pagging__arrow_disable"><img src="img/icons/arrow-paggin-left.svg" alt=""></a>
+								<ul class="pagging__list">
+									<li class="_active">
+										<a href="" class="pagging__item ">1</a>
+									</li>
+									<li>
+										<a href="" class="pagging__item">2</a>
+									</li>
+									<li>
+										<a href="" class="pagging__item">3</a>
+									</li>
+									<li>
+										...
+									</li>
+									<li>
+										<a href="" class="pagging__item">25</a>
+									</li>
+								</ul>
+								<a href="#" class="pagging__arrow pagging__arrow_right"><img src="img/icons/arrow-paggin-left.svg" alt=""></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</main>
+		<footer class="footer">
+			<div class="container_big">
+				<div class="footer__container">
+					<a class="footer__logo" href="index.html"><picture><source srcset="img/logo-footer.webp" type="image/webp"><img src="img/logo-footer.png" alt="логотип"></picture></a>
+					<div class="footer__body">
+						<ul class="footer__list">
+							<li class="footer__item"><a href="catalog.html">Каталог</a></li>
+							<li class="footer__item"><a href="gallery.html">Галерея</a></li>
+							<li class="footer__item"><a href="stock.html">Акции</a></li>
+							<li class="footer__item"><a href="service.html">Сервис</a></li>
+						</ul>
+						<ul class="footer__list">
+							<li class="footer__item"><a href="blog.html">Статьи</a></li>
+							<li class="footer__item"><a href="about-company.html">О нас</a></li>
+							<li class="footer__item"><a href="contacts.html">Контакты</a></li>
+						</ul>
+						<ul class="footer__list">
+							<li class="footer__item"><a class="footer__social footer__social_f" href="#">facebook</a></li>
+							<li class="footer__item"><a class="footer__social footer__social_t" href="#">telegram</a></li>
+							<li class="footer__item"><a class="footer__social footer__social_v" href="#">viber</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<div id="kitchen-popup" aria-hidden="true" class="popup popup-kitchen">
+		<div class="popup__wrapper">
+			<div class="popup-kitchen popup__content">
+				<!-- <button data-close type="button" class="popup__close">Закрыть</button> -->
+				<div class="popup-kitchen__slider swiper">
+					<div class="popup-kitchen__wrapper swiper-wrapper">
+						<div class="popup-kitchen__slide swiper-slide">
+							<div class="popup-kitchen__image-ibg"><picture><source srcset="img/kitchen/01.webp" type="image/webp"><img src="img/kitchen/01.jpg" alt="фотография"></picture></div>
+							<div class="popup-kitchen__bottom">
+								<p class="popup-kitchen__title">Quarella</p>
+								<a class="popup-kitchen__link btn-arrow" href="product.html">посмотреть товар</a>
+							</div>
+						</div>
+						<div class="popup-kitchen__slide swiper-slide">
+							<div class="popup-kitchen__image-ibg"><picture><source srcset="img/kitchen/02.webp" type="image/webp"><img src="img/kitchen/02.jpg" alt="фотография"></picture></div>
+							<div class="popup-kitchen__bottom">
+								<p class="popup-kitchen__title">Caesarstone Intense White 6011</p>
+								<a class="popup-kitchen__link btn-arrow" href="product.html">посмотреть товар</a>
+							</div>
+						</div>
+						<div class="popup-kitchen__slide swiper-slide">
+							<div class="popup-kitchen__image-ibg"><picture><source srcset="img/kitchen/03.webp" type="image/webp"><img src="img/kitchen/03.jpg" alt="фотография"></picture></div>
+							<div class="popup-kitchen__bottom">
+								<p class="popup-kitchen__title">Caesarstone Intense White 6020</p>
+								<a class="popup-kitchen__link btn-arrow" href="product.html">посмотреть товар</a>
+							</div>
+						</div>
+						<div class="popup-kitchen__slide swiper-slide">
+							<div class="popup-kitchen__image-ibg"><picture><source srcset="img/kitchen/04.webp" type="image/webp"><img src="img/kitchen/04.jpg" alt="фотография"></picture></div>
+							<div class="popup-kitchen__bottom">
+								<p class="popup-kitchen__title">Caesarstone Intense White 6011</p>
+								<a class="popup-kitchen__link btn-arrow" href="product.html">посмотреть товар</a>
+							</div>
+						</div>
+						<div class="popup-kitchen__slide swiper-slide">
+							<div class="popup-kitchen__image-ibg"><picture><source srcset="img/kitchen/05.webp" type="image/webp"><img src="img/kitchen/05.jpg" alt="фотография"></picture></div>
+							<div class="popup-kitchen__bottom">
+								<p class="popup-kitchen__title">Classico</p>
+								<a class="popup-kitchen__link btn-arrow" href="product.html">посмотреть товар</a>
+							</div>
+						</div>
+						<div class="popup-kitchen__slide swiper-slide">
+							<div class="popup-kitchen__image-ibg"><picture><source srcset="img/kitchen/06.webp" type="image/webp"><img src="img/kitchen/06.jpg" alt="фотография"></picture></div>
+							<div class="popup-kitchen__bottom">
+								<p class="popup-kitchen__title">Caesarstone Airy Concrete 4044</p>
+								<a class="popup-kitchen__link btn-arrow" href="product.html">посмотреть товар</a>
+							</div>
+						</div>
+						<div class="popup-kitchen__slide swiper-slide">
+							<div class="popup-kitchen__image-ibg"><picture><source srcset="img/kitchen/07.webp" type="image/webp"><img src="img/kitchen/07.jpg" alt="фотография"></picture></div>
+							<div class="popup-kitchen__bottom">
+								<p class="popup-kitchen__title">Classico - 2003</p>
+								<a class="popup-kitchen__link btn-arrow" href="product.html">посмотреть товар</a>
+							</div>
+						</div>
+						<div class="popup-kitchen__slide swiper-slide">
+							<div class="popup-kitchen__image-ibg"><picture><source srcset="img/kitchen/08.webp" type="image/webp"><img src="img/kitchen/08.jpg" alt="фотография"></picture></div>
+							<div class="popup-kitchen__bottom">
+								<p class="popup-kitchen__title">Caesarstone Topus Concrete 4023</p>
+								<a class="popup-kitchen__link btn-arrow" href="product.html">посмотреть товар</a>
+							</div>
+						</div>
+						<div class="popup-kitchen__slide swiper-slide">
+							<div class="popup-kitchen__image-ibg"><picture><source srcset="img/kitchen/09.webp" type="image/webp"><img src="img/kitchen/09.jpg" alt="фотография"></picture></div>
+							<div class="popup-kitchen__bottom">
+								<p class="popup-kitchen__title">Classico - 6100</p>
+								<a class="popup-kitchen__link btn-arrow" href="product.html">посмотреть товар</a>
+							</div>
+						</div>
+					</div>
+					<button type="button" class="main-slide__arrow main-slide__arrow_prev">
+						<!-- <img src="img/icons/arrow-slider-sq-prev_white.svg" alt="следующий слайд"> -->
+						<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<mask id="path-1-inside-1_53_4373" fill="white">
+								<path d="M15 0L0 15L15 30L30 15L15 0Z" />
+							</mask>
+							<path d="M9.51487 15.3536C9.31961 15.1583 9.31961 14.8417 9.51487 14.6464L12.6968 11.4645C12.8921 11.2692 13.2087 11.2692 13.404 11.4645C13.5992 11.6597 13.5992 11.9763 13.404 12.1716L10.5755 15L13.404 17.8284C13.5992 18.0237 13.5992 18.3403 13.404 18.5355C13.2087 18.7308 12.8921 18.7308 12.6968 18.5355L9.51487 15.3536ZM22.5 15.5H9.86842V14.5H22.5V15.5ZM15 0L14.2929 -0.707107L15 -1.41421L15.7071 -0.707107L15 0ZM0 15L-0.707108 15.7071L-1.41421 15L-0.707108 14.2929L0 15ZM15 30L15.7071 30.7071L15 31.4142L14.2929 30.7071L15 30ZM30 15L30.7071 14.2929L31.4142 15L30.7071 15.7071L30 15ZM15.7071 0.707107L0.707106 15.7071L-0.707108 14.2929L14.2929 -0.707107L15.7071 0.707107ZM0.707106 14.2929L15.7071 29.2929L14.2929 30.7071L-0.707108 15.7071L0.707106 14.2929ZM14.2929 29.2929L29.2929 14.2929L30.7071 15.7071L15.7071 30.7071L14.2929 29.2929ZM29.2929 15.7071L14.2929 0.707107L15.7071 -0.707107L30.7071 14.2929L29.2929 15.7071Z" mask="url(#path-1-inside-1_53_4373)" />
+						</svg>
+
+					</button>
+					<button type="button" class="main-slide__arrow main-slide__arrow_next">
+						<!-- <img src="img/icons/arrow-slider-sq-next_white.svg" alt="предыдущий слайд"> -->
+						<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<mask id="path-1-inside-1_53_4371" fill="white">
+								<path d="M15 0L30 15L15 30L0 15L15 0Z" />
+							</mask>
+							<path d="M20.4851 15.3536C20.6804 15.1583 20.6804 14.8417 20.4851 14.6464L17.3032 11.4645C17.1079 11.2692 16.7913 11.2692 16.596 11.4645C16.4008 11.6597 16.4008 11.9763 16.596 12.1716L19.4245 15L16.596 17.8284C16.4008 18.0237 16.4008 18.3403 16.596 18.5355C16.7913 18.7308 17.1079 18.7308 17.3032 18.5355L20.4851 15.3536ZM7.5 15.5H20.1316V14.5H7.5V15.5ZM15 0L15.7071 -0.707107L15 -1.41421L14.2929 -0.707107L15 0ZM30 15L30.7071 15.7071L31.4142 15L30.7071 14.2929L30 15ZM15 30L14.2929 30.7071L15 31.4142L15.7071 30.7071L15 30ZM0 15L-0.707107 14.2929L-1.41421 15L-0.707107 15.7071L0 15ZM14.2929 0.707107L29.2929 15.7071L30.7071 14.2929L15.7071 -0.707107L14.2929 0.707107ZM29.2929 14.2929L14.2929 29.2929L15.7071 30.7071L30.7071 15.7071L29.2929 14.2929ZM15.7071 29.2929L0.707107 14.2929L-0.707107 15.7071L14.2929 30.7071L15.7071 29.2929ZM0.707107 15.7071L15.7071 0.707107L14.2929 -0.707107L-0.707107 14.2929L0.707107 15.7071Z" mask="url(#path-1-inside-1_53_4371)" />
+						</svg>
+
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- <script
+  src="https://code.jquery.com/jquery-3.6.3.min.js"
+  integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+  crossorigin="anonymous"></script> -->
+	<script src="js/app.min.js?_v=20230312135657"></script>
+
+</body>
+
+</html>
